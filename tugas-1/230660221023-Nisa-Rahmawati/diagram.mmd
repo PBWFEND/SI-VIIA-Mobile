@@ -1,5 +1,0 @@
-flowchart LR
-    A["📱 Aplikasi Mobile<br>(Flutter)"] -->|"1. HTTP Request (JSON + GPS/QR)"| B["🖥️ REST API<br>(Backend SI Absensi)"]
-    B -->|"2. Validasi Jadwal & Lokasi"| C[("🗄️ Database Absensi")]
-    C -->|"3. Simpan Status Kehadiran"| B
-    B -->|"4. HTTP Response (Status Absen)"| A
