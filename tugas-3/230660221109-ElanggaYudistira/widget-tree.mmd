@@ -1,0 +1,31 @@
+flowchart TD
+
+A[MaterialApp<br/>MoneyTrack Mahasiswa]
+
+A --> B[Scaffold]
+
+B --> C[AppBar<br/>Text Dashboard Keuangan]
+
+B --> D[body: Padding]
+
+D --> E[Column]
+
+E --> F[Text<br/>MoneyTrack Mahasiswa]
+
+E --> G[Row]
+
+G --> H[Card<br/>Pemasukan<br/>Rp 2.000.000]
+
+G --> I[Card<br/>Pengeluaran<br/>Rp 800.000]
+
+E --> J[Expanded]
+
+J --> K[ListView.builder]
+
+K --> L[ListTile<br/>Gaji Freelance]
+
+K --> M[ListTile<br/>Makan Siang]
+
+K --> N[ListTile<br/>Kuota Internet]
+
+K --> O[ListTile<br/>Transportasi]
