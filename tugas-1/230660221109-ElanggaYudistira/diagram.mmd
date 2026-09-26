@@ -1,0 +1,5 @@
+flowchart LR
+A["Aplikasi Mobile Flutter<br>Pengaduan Fasilitas"] -->|"HTTP Request JSON"| B["Backend SI REST API"]
+B -->|"Query Data"| C[("Database Kampus")]
+C -->|"Data Laporan"| B
+B -->|"HTTP Response JSON"| A
