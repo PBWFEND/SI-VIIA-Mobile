@@ -1,9 +1,0 @@
-flowchart LR
-    A["Aplikasi Mobile<br/>Pengelolaan Surat Masuk UKM"]
-    B["Backend Sistem Informasi<br/>Pengelolaan Surat Masuk UKM"]
-    C[("Database<br/>Surat Masuk")]
-
-    A -->|"HTTP Request"| B
-    B -->|"Query / Simpan Data"| C
-    C -->|"Data Surat"| B
-    B -->|"HTTP Response"| A

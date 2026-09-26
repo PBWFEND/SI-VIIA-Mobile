@@ -1,0 +1,6 @@
+graph TD
+    A[Aplikasi Mobile Perpustakaan Kampus] -->|1. HTTP Request GET / POST / PUT| B[Backend SI Perpustakaan REST API]
+    B -->|2. Query Data / Update Record| C[(Database Utama Perpustakaan)]
+    C -->|3. Data Result Set| B
+    B -->|4. HTTP Response JSON Status & Data| A
+  
