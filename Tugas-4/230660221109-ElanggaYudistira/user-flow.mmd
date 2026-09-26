@@ -1,0 +1,36 @@
+flowchart TD
+
+S(["Mulai: Mahasiswa membuka aplikasi MoneyTrack"]) 
+
+S --> A["Halaman Login"]
+
+A --> B{"Akun valid?"}
+
+B -- "Tidak" --> C["Tampilkan pesan login gagal"]
+C --> A
+
+B -- "Ya" --> D["Dashboard Keuangan"]
+
+D --> E["Pilih menu Tambah Transaksi"]
+
+E --> F["Mengisi data transaksi<br/>Nama transaksi, kategori, jumlah, tanggal"]
+
+F --> G{"Data transaksi lengkap?"}
+
+G -- "Tidak" --> H["Tampilkan pesan kesalahan<br/>Lengkapi data transaksi"]
+H --> F
+
+G -- "Ya" --> I["Simpan transaksi"]
+
+I --> J{"Kategori transaksi tersedia?"}
+
+J -- "Tidak" --> K["Buat kategori baru"]
+K --> I
+
+J -- "Ya" --> L["Sistem memperbarui daftar transaksi"]
+
+L --> M["Halaman Riwayat Transaksi"]
+
+M --> N["Mahasiswa melihat transaksi tersimpan"]
+
+N --> T(["Selesai: Transaksi berhasil dicatat"])
