@@ -1,0 +1,5 @@
+graph LR
+    A["Aplikasi Mobile <br> Absensi Organisasi"] -->|"HTTP Request<br>(GET/POST/PUT)"| B("Backend SI<br>Sistem Organisasi")
+    B -->|"Query/Update"| C[("Database<br>Keanggotaan & Presensi")]
+    C -->|"Data"| B
+    B -->|"HTTP Response<br>(JSON)"| A
