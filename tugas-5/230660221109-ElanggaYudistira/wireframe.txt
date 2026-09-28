@@ -1,0 +1,26 @@
+# Wireframe MoneyTrack Mahasiswa
+
+## Layar 1 - Dashboard Keuangan
+
++--------------------------------+
+| MoneyTrack Mahasiswa           |
+|--------------------------------|
+| Total Saldo                    |
+| Rp 1.500.000  (F-01)           |
+|--------------------------------|
+| Daftar Transaksi (F-03)        |
+| Makan          -20.000         |
+| Transport      -10.000         |
+|--------------------------------|
+| + Tambah Transaksi (F-02)      |
++--------------------------------+
+
+## Layar 2 - Riwayat Kosong
+
++--------------------------------+
+| Riwayat Transaksi (F-03)       |
+|                                |
+|              📄                |
+|       Belum ada transaksi      |
+|                                |
++--------------------------------+
