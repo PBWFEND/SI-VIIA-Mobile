@@ -26,3 +26,5 @@ Predikat akhir: A
 ## 2. Refleksi
 
 Sintaks yang paling sering saya salah gunakan adalah casting as int pada item['skor']. Karena data disimpan sebagai Map<String, Object>, Dart menganggap nilainya bertipe Object, sehingga saya lupa menambahkan as int sebelum menjumlahkannya di dalam hitungRataRata. Akibatnya muncul error yang membingungkan karena Dart menolak operasi + pada tipe Object, padahal isinya jelas angka.
+```
+
