@@ -1,0 +1,10 @@
+flowchart TD
+    A["MaterialApp<br>(title: Glazent.pro)"] --> B["HalamanLayanan<br>(Scaffold)"]
+    B --> C["AppBar<br>'Glazent.pro — Katalog Layanan'"]
+    B --> D["body: Column"]
+    D --> E["Padding<br>Text sapaan"]
+    D --> F["Expanded"]
+    F --> G["ListView.builder"]
+    G --> H["LayananRow × 5"]
+    H --> I["Row: Icon + Column(nama, kategori) + Text(status)"]
+    B --> J["floatingActionButton: '+'"]
