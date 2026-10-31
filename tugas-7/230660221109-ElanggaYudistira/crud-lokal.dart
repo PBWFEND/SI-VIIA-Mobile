@@ -215,7 +215,7 @@ class _DaftarTransaksiPageState extends State<DaftarTransaksiPage> {
                     physics: const NeverScrollableScrollPhysics(),
                     mainAxisSpacing: 12,
                     crossAxisSpacing: 12,
-                    childAspectRatio: wide ? 2.5 : 4.6,
+                    childAspectRatio: wide ? 2.5 : 1.8,
                     children: [
                       _RingkasanCard(
                         label: 'Saldo',
@@ -348,7 +348,7 @@ class _RingkasanCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: Padding(
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         child: Row(
           children: [
             CircleAvatar(
@@ -360,6 +360,7 @@ class _RingkasanCard extends StatelessWidget {
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(label),
@@ -571,3 +572,4 @@ class _FormTransaksiDialogState extends State<_FormTransaksiDialog> {
     );
   }
 }
+
