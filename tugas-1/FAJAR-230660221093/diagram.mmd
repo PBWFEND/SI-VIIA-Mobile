@@ -1,0 +1,5 @@
+flowchart LR
+	A["Aplikasi Mobile Glazent.pro<br>(Flutter)"] -->|"HTTP Request<br>(JSON)"| B["Backend Glazent.pro<br>(REST API)"]
+	B -->|"Query atau perubahan data"| C[("Database Glazent.pro<br>(pesanan, jadwal, garansi)")]
+	C -->|"Data hasil query"| B
+	B -->|"HTTP Response<br>(JSON)"| A

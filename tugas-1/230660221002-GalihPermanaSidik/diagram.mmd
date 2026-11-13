@@ -1,0 +1,10 @@
+---
+config:
+  theme: neo
+  look: neo
+---
+flowchart LR
+	A["Aplikasi Mobile SiLapor Kampus<br>(Flutter)"] -->|"HTTP Request<br>(JSON)"| B["Backend SiLapor Kampus<br>(REST API)"]
+	B -->|"Query atau perubahan data"| C[("Database SiLapor Kampus<br>(laporan, status, gedung)")]
+	C -->|"Data hasil query"| B
+	B -->|"HTTP Response<br>(JSON)"| A

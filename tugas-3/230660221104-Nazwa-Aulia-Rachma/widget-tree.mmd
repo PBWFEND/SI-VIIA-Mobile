@@ -1,0 +1,13 @@
+flowchart TD
+    A[MaterialApp\nPerpustakaan Kampus] --> B[Scaffold]
+    B --> C[AppBar\nPerpustakaan Kampus]
+    B --> D[body: Padding]
+    B --> E[FloatingActionButton.extended]
+    D --> F[Column]
+    F --> G[Stack\nBanner sambutan]
+    F --> H[Row]
+    H --> H1[_InfoCard Buku dipinjam]
+    H --> H2[_InfoCard Jatuh tempo]
+    F --> I[ListView.builder]
+    I --> J[Card + ListTile]
+    J --> K[CircleAvatar + Chip status]
