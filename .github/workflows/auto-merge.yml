@@ -45,8 +45,10 @@ jobs:
             echo "WARNING: author $AUTHOR tidak memuat NIM, cek folder-sendiri nonaktif"
           fi
 
+          # Pemisah field memakai US (\x1f), bukan TAB: TAB akan "collapse"
+          # field kosong sehingga previous_filename ikut berisi angka.
           FILES_TSV=$(gh api --paginate "repos/$REPO/pulls/$PR_NUMBER/files" \
-            --jq '.[] | [.status, .filename, (.previous_filename // ""), .deletions, .additions] | @tsv')
+            --jq '.[] | [.status, .filename, (.previous_filename // ""), .deletions, .additions] | join("\u001f")')
 
           TOTAL_FILES=$(grep -cve '^[[:space:]]*$' <<<"$FILES_TSV" || true)
           if [ "$TOTAL_FILES" -eq 0 ]; then
@@ -56,7 +58,7 @@ jobs:
             fail "PR terlalu besar ($TOTAL_FILES file, batas 200)"
           fi
 
-          TOTAL_DEL=$(awk -F'\t' '{d+=$4} END {print d+0}' <<<"$FILES_TSV")
+          TOTAL_DEL=$(awk -F'\037' '{d+=$4} END {print d+0}' <<<"$FILES_TSV")
           if [ "$TOTAL_DEL" -gt 500 ]; then
             fail "total $TOTAL_DEL baris terhapus (>500), perlu review manual"
           fi
@@ -85,7 +87,7 @@ jobs:
             fail "berisi conflict marker: $MARKER_FILE"
           fi
 
-          while IFS=$'\t' read -r status filename prev _del _add; do
+          while IFS=$'\x1f' read -r status filename prev _del _add; do
             [ -n "${status:-}" ] || continue
             if [ "$status" = "removed" ]; then
               fail "menghapus file: $filename"
@@ -105,7 +107,34 @@ jobs:
                 fi
               done
             done
+            # Aturan folder NIM: berkas WAJIB berada di dalam folder milik satu NIM
+            # (kelas B: <NIM>/... ; kelas A: tugas-N/<NIM-Nama>/...). Berkas yang
+            # diletakkan di luar folder NIM (mis. di root repo) ditolak.
+            # Hanya path BARU yang diperiksa: rename dari luar folder NIM ke folder
+            # sendiri (kebersihan submission) tetap boleh.
+            if [ "$AUTHOR" != "yysofiyan" ]; then
+              case "$filename" in
+                README.md|.gitignore|.github/*) ;;
+                *)
+                  nim_path=$(printf '%s\n' "$filename" | cut -d/ -f1,2 | tr '/' '\n' \
+                    | tr -cs '0-9' '\n' | grep -E '^2306[0-9]{7,}$' | head -n1 || true)
+                  if [ -z "$nim_path" ]; then
+                    fail "berkas di luar folder NIM: $filename"
+                  else
+                    PR_NIMS="${PR_NIMS:-} $nim_path"
+                  fi
+                  ;;
+              esac
+            fi
           done <<<"$FILES_TSV"
+
+          if [ "$AUTHOR" != "yysofiyan" ]; then
+            UNIQ_NIMS=$(printf '%s\n' $PR_NIMS | tr ' ' '\n' | sort -u | sed '/^$/d')
+            NIM_COUNT=$(printf '%s\n' "$UNIQ_NIMS" | grep -c . || true)
+            if [ "$NIM_COUNT" -gt 1 ]; then
+              fail "PR menyentuh folder lebih dari satu mahasiswa: $(printf '%s' "$UNIQ_NIMS" | tr '\n' ' ')"
+            fi
+          fi
 
           OLD_IDS=$(gh api --paginate "repos/$REPO/issues/$PR_NUMBER/comments" \
             --jq '.[] | select(.user.login=="github-actions[bot]") | select((.body // "") | contains("Auto-merge")) | .id' || true)
