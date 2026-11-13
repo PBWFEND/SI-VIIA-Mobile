@@ -123,6 +123,13 @@
   </tr>
   <tr>
     <td align="center">
+      <a href="https://github.com/230660221005">
+        <img src="https://avatars.githubusercontent.com/u/203027187?v=4&s=200" width="100px;" alt="230660221005"/><br>
+        <sub><b>clara desmiati</b></sub>
+      </a><br>
+      <sub>230660221005</sub>
+    </td>
+    <td align="center">
       <a href="https://github.com/230660221026">
         <img src="https://avatars.githubusercontent.com/u/203064744?v=4&s=200" width="100px;" alt="230660221026"/><br>
         <sub><b>Wendi Feriyanda</b></sub>
@@ -136,6 +143,8 @@
       </a><br>
       <sub>230660221112</sub>
     </td>
+  </tr>
+  <tr>
     <td align="center">
       <a href="https://github.com/ferry">
         <img src="https://avatars.githubusercontent.com/u/28897?v=4&s=200" width="100px;" alt="ferry"/><br>
