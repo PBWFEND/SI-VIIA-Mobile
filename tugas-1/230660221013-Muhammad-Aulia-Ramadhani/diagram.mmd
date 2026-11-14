@@ -1,0 +1,5 @@
+graph LR
+    A[Aplikasi Mobile Kantin] -->|HTTP Request| B[Backend API Kantin]
+    B -->|Query / Mutation| C[(Database Kantin)]
+    C -->|Data Result| B
+    B -->|HTTP Response| A
