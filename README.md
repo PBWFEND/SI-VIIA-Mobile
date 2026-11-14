@@ -123,6 +123,13 @@
   </tr>
   <tr>
     <td align="center">
+      <a href="https://github.com/BillyApandisastra230660221112">
+        <img src="https://avatars.githubusercontent.com/u/203065988?v=4&s=200" width="100px;" alt="BillyApandisastra230660221112"/><br>
+        <sub><b>Billy Apandisastra</b></sub>
+      </a><br>
+      <sub>230660221112</sub>
+    </td>
+    <td align="center">
       <a href="https://github.com/230660221005">
         <img src="https://avatars.githubusercontent.com/u/203027187?v=4&s=200" width="100px;" alt="230660221005"/><br>
         <sub><b>clara desmiati</b></sub>
@@ -136,13 +143,6 @@
       </a><br>
       <sub>230660221026</sub>
     </td>
-    <td align="center">
-      <a href="https://github.com/BillyApandisastra230660221112">
-        <img src="https://avatars.githubusercontent.com/u/203065988?v=4&s=200" width="100px;" alt="BillyApandisastra230660221112"/><br>
-        <sub><b>Billy Apandisastra</b></sub>
-      </a><br>
-      <sub>230660221112</sub>
-    </td>
   </tr>
   <tr>
     <td align="center">
@@ -150,7 +150,7 @@
         <img src="https://avatars.githubusercontent.com/u/28897?v=4&s=200" width="100px;" alt="ferry"/><br>
         <sub><b>ferry</b></sub>
       </a><br>
-      <sub>230660221002</sub>
+      <sub>230660221112</sub>
     </td>
   </tr>
 </table>
