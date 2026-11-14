@@ -38,18 +38,18 @@
       <sub>230660221002</sub>
     </td>
     <td align="center">
-      <a href="https://github.com/230660221009">
-        <img src="https://avatars.githubusercontent.com/u/203071958?v=4&s=200" width="100px;" alt="230660221009"/><br>
-        <sub><b>ADE YUSUP MAULANA</b></sub>
-      </a><br>
-      <sub>230660221009</sub>
-    </td>
-    <td align="center">
       <a href="https://github.com/fajar230660221093">
         <img src="https://avatars.githubusercontent.com/u/202958534?v=4&s=200" width="100px;" alt="fajar230660221093"/><br>
         <sub><b>Fajar</b></sub>
       </a><br>
       <sub>230660221093</sub>
+    </td>
+    <td align="center">
+      <a href="https://github.com/230660221009">
+        <img src="https://avatars.githubusercontent.com/u/203071958?v=4&s=200" width="100px;" alt="230660221009"/><br>
+        <sub><b>ADE YUSUP MAULANA</b></sub>
+      </a><br>
+      <sub>230660221009</sub>
     </td>
   </tr>
   <tr>
@@ -123,6 +123,13 @@
   </tr>
   <tr>
     <td align="center">
+      <a href="https://github.com/230660221005">
+        <img src="https://avatars.githubusercontent.com/u/203027187?v=4&s=200" width="100px;" alt="230660221005"/><br>
+        <sub><b>clara desmiati</b></sub>
+      </a><br>
+      <sub>230660221005</sub>
+    </td>
+    <td align="center">
       <a href="https://github.com/230660221026">
         <img src="https://avatars.githubusercontent.com/u/203064744?v=4&s=200" width="100px;" alt="230660221026"/><br>
         <sub><b>Wendi Feriyanda</b></sub>
@@ -136,12 +143,14 @@
       </a><br>
       <sub>230660221112</sub>
     </td>
+  </tr>
+  <tr>
     <td align="center">
       <a href="https://github.com/ferry">
         <img src="https://avatars.githubusercontent.com/u/28897?v=4&s=200" width="100px;" alt="ferry"/><br>
         <sub><b>ferry</b></sub>
       </a><br>
-      <sub>230660221023</sub>
+      <sub>230660221002</sub>
     </td>
   </tr>
 </table>
