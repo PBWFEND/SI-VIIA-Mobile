@@ -43,3 +43,11 @@ Pada pertemuan 9-10, *In-Memory Database* sementara akan digantikan dengan packa
 
 ## 7. Refleksi Pembelajaran Tengah Semester
 Membuat aplikasi Flutter membantu saya memahami betapa powerful-nya UI Deklaratif. Saya menyadari pentingnya *state management* yang rapi. Memisahkan *immutable model* dengan logika `setState` sangat krusial agar aliran data CRUD tetap konsisten dan tidak *buggy* saat dipresentasikan ke pengguna.
+
+## 8. Deklarasi Penggunaan AI
+Dalam penyelesaian evaluasi tengah semester (UTS / Milestone M4) ini, saya memanfaatkan asisten AI (**ChatGPT / Claude**) sesuai ketentuan akademik untuk membantu:
+1. **Penyusunan Dokumentasi & Laporan**: Merancang kerangka Laporan Progress UTS dan membantu memformulasikan jawaban esai HOTS pada Tes Konsep sesuai rubrik penilaian.
+2. **Debugging & Arsitektur Kode Flutter (`crud-lokal.dart`)**: Mengidentifikasi serta memecahkan kendala teknis *Unbounded Height Error* dengan membungkus `ListView.builder` menggunakan widget `Expanded`, serta merancang pola immutable `copyWith` pada model data transaksi.
+3. **Panduan Alur Kerja Git & PowerShell**: Menyusun perintah isolasi project pengujian Flutter lokal agar repository GitHub kelas tetap bersih dari file instalasi internal.
+
+**Pernyataan Tanggung Jawab:** Seluruh logika bisnis SI Perpustakaan, pembuatan form validasi, pemahaman konsep Dart/Flutter, serta pengujian aplikasi berjalan sepenuhnya dipahami, dipraktikkan, dan dipertanggungjawabkan oleh penulis.
