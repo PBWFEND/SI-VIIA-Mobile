@@ -1,0 +1,56 @@
+---
+title: TaskCampus — Widget Tree Halaman Utama
+config:
+  theme: base
+  themeVariables:
+    fontFamily: Arial, sans-serif
+    fontSize: 15px
+    primaryColor: '#E3F3F1'
+    primaryTextColor: '#172C43'
+    primaryBorderColor: '#087F78'
+    lineColor: '#63758B'
+    background: '#FFFFFF'
+  flowchart:
+    curve: linear
+    nodeSpacing: 18
+    rankSpacing: 34
+---
+flowchart TB
+    START["main() → runApp(TaskCampusApp)"] --> APP["MaterialApp<br/>title: TaskCampus"]
+    APP --> SCAFFOLD["Scaffold"]
+    SCAFFOLD --> BAR["AppBar"]
+    BAR --> BARROW["Row<br/>Icon + Text: TaskCampus"]
+    SCAFFOLD --> CENTER["body: Center"]
+    CENTER --> BOX["ConstrainedBox<br/>maxWidth: 1040"]
+    BOX --> PAD["Padding<br/>EdgeInsets.all(20)"]
+    PAD --> COL["Column<br/>konten utama"]
+
+    COL --> INTRO["Text: Halo, Sharel<br/>Text: deskripsi halaman"]
+    COL --> HERO["Container<br/>informasi mahasiswa"]
+    HERO --> HEROROW["Row<br/>Icon + Expanded(Column)"]
+    HEROROW --> HEROTEXT["Text: pesan singkat<br/>Text: nama, NPM, kelas"]
+    COL --> SUMMARY["Row<br/>3 ringkasan tugas"]
+    SUMMARY --> SUMMARYITEM["Expanded → Container → Column<br/>Text: jumlah + label<br/>(diulang 3 kali)"]
+    COL --> HEADING["Row<br/>Expanded(Text: Daftar tugas)<br/>Text: Semester 7"]
+    COL --> EXP["Expanded<br/>membatasi tinggi daftar"]
+    COL --> FOOT["Text<br/>footer TaskCampus"]
+
+    EXP --> LIST["ListView.separated<br/>4 entri dari daftarTugas"]
+    LIST --> CARD["Container<br/>_kartuTugas × 4"]
+    CARD --> CARDROW["Row<br/>nomor + isi tugas"]
+    CARDROW --> AVATAR["CircleAvatar<br/>Text: nomor"]
+    CARDROW --> CARDEXP["Expanded"]
+    CARDEXP --> CARDCOL["Column"]
+    CARDCOL --> LABELS["Text: nama tugas<br/>Text: mata kuliah"]
+    CARDCOL --> META["Wrap"]
+    META --> DUE["Text: tenggat"]
+    META --> STATUS["Container<br/>Text: status"]
+
+    %% Diagram merangkum widget dekoratif; SizedBox dan detail tema dihilangkan.
+    %% Container padding ditulis pada Container, bukan widget Padding tambahan.
+    classDef root fill:#253F65,stroke:#253F65,color:#FFFFFF,stroke-width:2px
+    classDef layout fill:#E3F3F1,stroke:#087F78,color:#172C43
+    classDef content fill:#F4F7FA,stroke:#A7B6C8,color:#172C43
+    class START,APP,SCAFFOLD root
+    class BAR,BARROW,CENTER,BOX,PAD,COL,HERO,HEROROW,SUMMARY,SUMMARYITEM,HEADING,EXP,LIST,CARD,CARDROW,CARDEXP,CARDCOL,META,STATUS layout
+    class INTRO,HEROTEXT,FOOT,AVATAR,LABELS,DUE content

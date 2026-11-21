@@ -1,0 +1,9 @@
+flowchart LR
+    A["Aplikasi Mobile TaskCampus<br/>(Flutter)"]
+    B["Backend SI TaskCampus<br/>(REST API)"]
+    C[("Database TaskCampus<br/>(Tugas dan Mata Kuliah)")]
+
+    A -->|"HTTP Request (JSON)<br/>GET / POST / PUT / DELETE"| B
+    B -->|"Query / simpan / ubah data"| C
+    C -->|"Hasil query"| B
+    B -->|"HTTP Response (JSON)"| A

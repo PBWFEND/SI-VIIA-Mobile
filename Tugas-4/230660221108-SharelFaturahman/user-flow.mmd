@@ -1,0 +1,45 @@
+---
+title: TaskCampus — Menambahkan Tugas Pribadi
+config:
+  theme: base
+  themeVariables:
+    fontFamily: Arial, sans-serif
+    fontSize: 16px
+    primaryColor: '#E5F3F1'
+    primaryTextColor: '#193349'
+    primaryBorderColor: '#087F78'
+    lineColor: '#64778A'
+  flowchart:
+    htmlLabels: false
+    curve: linear
+    nodeSpacing: 28
+    rankSpacing: 30
+    padding: 14
+---
+flowchart TD
+    S(["Mulai: Ari membuka TaskCampus"]) --> A["1. Halaman Dashboard tugas"]
+    A --> B["2. Pilih Tambah tugas"]
+    B --> C["3. Halaman Form tambah tugas"]
+    C --> D["4. Isi judul tugas"]
+    D --> E["5. Pilih mata kuliah"]
+    E --> F["6. Tentukan tanggal dan jam tenggat"]
+    F --> G["7. Tekan Simpan"]
+    G --> H{"8. Data tugas valid?"}
+    H -- "Tidak" --> X["9. Tampilkan kesalahan pada kolom terkait;<br/>pertahankan isian"]
+    X --> C
+    H -- "Ya" --> I{"10. Tugas identik sudah tersimpan?"}
+    I -- "Ya" --> Y["11. Tampilkan pesan tugas sudah ada;<br/>pertahankan isian"]
+    Y --> C
+    I -- "Tidak" --> J["12. Simpan tugas baru"]
+    J --> K["13. Tampilkan konfirmasi berhasil"]
+    K --> L["14. Tampilkan daftar yang memuat tugas baru"]
+    L --> T(["Tujuan tercapai: tugas pribadi tercatat"])
+
+    classDef endpoint fill:#253F65,stroke:#253F65,color:#FFFFFF,stroke-width:2px
+    classDef step fill:#E5F3F1,stroke:#087F78,color:#193349
+    classDef decision fill:#FFF4D6,stroke:#B98018,color:#503B12,stroke-width:2px
+    classDef recovery fill:#FFF0EC,stroke:#BB6750,color:#663D32
+    class S,T endpoint
+    class A,B,C,D,E,F,G,J,K,L step
+    class H,I decision
+    class X,Y recovery
