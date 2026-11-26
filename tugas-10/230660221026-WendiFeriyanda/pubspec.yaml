@@ -1,0 +1,30 @@
+
+name: pab_p1_230660221026
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.13.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Package untuk tampilan ikon Cupertino
+  cupertino_icons: ^1.0.8
+
+  # Package untuk mengakses REST API (HTTP GET dan POST)
+  http: ^1.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # Package untuk pemeriksaan kualitas kode Flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  # Mengaktifkan Material Icons
+  uses-material-design: true
