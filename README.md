@@ -107,12 +107,21 @@
       <sub>230660221019</sub>
     </td>
     <td align="center">
+      <a href="https://github.com/SharelFatur">
+        <img src="https://avatars.githubusercontent.com/u/203067057?v=4&s=200" width="100px;" alt="SharelFatur"/><br>
+        <sub><b>SharelFatur</b></sub>
+      </a><br>
+      <sub>230660221108</sub>
+    </td>
+    <td align="center">
       <a href="https://github.com/sesipramesti05">
         <img src="https://avatars.githubusercontent.com/u/203070690?v=4&s=200" width="100px;" alt="sesipramesti05"/><br>
         <sub><b>sesipramesti05</b></sub>
       </a><br>
       <sub>230660221017</sub>
     </td>
+  </tr>
+  <tr>
     <td align="center">
       <a href="https://github.com/ameliapl3">
         <img src="https://avatars.githubusercontent.com/u/203064031?v=4&s=200" width="100px;" alt="ameliapl3"/><br>
@@ -120,8 +129,6 @@
       </a><br>
       <sub>230660221101</sub>
     </td>
-  </tr>
-  <tr>
     <td align="center">
       <a href="https://github.com/230660221026">
         <img src="https://avatars.githubusercontent.com/u/203064744?v=4&s=200" width="100px;" alt="230660221026"/><br>
@@ -135,13 +142,6 @@
         <sub><b>clara desmiati</b></sub>
       </a><br>
       <sub>230660221005</sub>
-    </td>
-    <td align="center">
-      <a href="https://github.com/SharelFatur">
-        <img src="https://avatars.githubusercontent.com/u/203067057?v=4&s=200" width="100px;" alt="SharelFatur"/><br>
-        <sub><b>SharelFatur</b></sub>
-      </a><br>
-      <sub>230660221108</sub>
     </td>
   </tr>
   <tr>
@@ -157,7 +157,7 @@
         <img src="https://avatars.githubusercontent.com/u/28897?v=4&s=200" width="100px;" alt="ferry"/><br>
         <sub><b>ferry</b></sub>
       </a><br>
-      <sub>230660221109</sub>
+      <sub>230660221101</sub>
     </td>
   </tr>
 </table>
